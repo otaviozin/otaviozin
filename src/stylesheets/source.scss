@@ -1,6 +1,8 @@
-
+// Colors
 $primary-color: #212121;
 $text-color: #fff;
+$container-color: #3d3d3d;
+
 *{
   	padding: 0;
  	margin: 0;
@@ -17,4 +19,17 @@ body{
 	display: flex;
 	justify-content: space-around;
 	padding: 15px;
+}
+
+.container{
+	background-color: $container-color;
+	padding: 10px;
+	border-radius: 8px;
+}
+
+.border{
+	margin: 10px;
+	padding: 2px;
+	background: linear-gradient(0deg, rgba(0,252,255,1) 0%, rgba(57,255,20,1) 100%);
+	border-radius: 8px;
 }

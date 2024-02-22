@@ -1,9 +1,17 @@
 import Navbar from '@/components/Navbar';
+import Container from '@/components/Container';
 
 export default function Home() {
     return (
 		<div>
 			<Navbar />
+			<Container>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam maximus semper quam vel lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas volutpat vehicula orci, vitae ultrices elit efficitur eu. Vivamus iaculis lobortis dui vitae venenatis. Nunc vitae massa eget ex vehicula dignissim. Vestibulum imperdiet, tellus non placerat mattis, dolor diam pharetra ante, vitae volutpat tortor ipsum ac justo. Vestibulum maximus tellus at cursus elementum. Ut at risus aliquam, sodales ante at, tempor tortor. In auctor arcu eleifend erat accumsan pharetra. Sed eu scelerisque sem. Suspendisse semper enim et eros sagittis, in auctor urna fermentum. Sed nunc erat, euismod ut leo vel, vulputate blandit massa.
+				Phasellus sed augue nec dui scelerisque convallis non sed diam. Vivamus ut consectetur tortor, eget luctus odio. Duis egestas aliquet egestas. Curabitur faucibus, nisi ut lobortis tincidunt, turpis urna venenatis diam, eget iaculis arcu nibh sed diam. Duis consectetur eleifend luctus. Cras egestas tempor felis et dignissim. Duis eleifend sed leo non accumsan. Maecenas erat ante, bibendum in dui et, eleifend cursus ligula. Sed gravida lacus nec nisl convallis egestas. Praesent vel tempus neque. Vivamus nec lacinia tellus. Mauris ut venenatis sapien, sed consequat justo. Sed ultrices justo non felis euismod, nec rhoncus nulla ultricies. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut interdum rutrum justo.
+				Duis ac felis tristique diam aliquet hendrerit ut a ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam elementum nunc ac sapien egestas eleifend eget ac augue. Vestibulum lobortis est vel eleifend fringilla. Duis at consequat enim, ut scelerisque felis. Duis aliquet nec nisl quis maximus. Quisque ornare lorem a nisi elementum, sit amet tempus leo porta. Nullam ut lorem iaculis, facilisis tortor eu, condimentum quam. Maecenas mattis est est, non convallis dui rhoncus sed. Donec pharetra vehicula metus.
+				In placerat, augue at mattis rutrum, augue enim porta ante, vitae tempor magna ex ac arcu. Pellentesque egestas magna id placerat posuere. Suspendisse eu sodales odio, vitae venenatis velit. Integer eget pulvinar lectus, et pulvinar turpis. Donec volutpat ligula non tortor viverra, et commodo nulla gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ornare mi. Donec a tristique justo. Quisque ut eleifend diam.
+				Integer scelerisque vestibulum bibendum. Vestibulum viverra lectus turpis, vel vestibulum ex mattis ut. Vivamus non risus enim. Vestibulum facilisis sodales felis, eget sagittis risus varius id. Vivamus nec consequat odio, sed pharetra odio. Praesent sagittis vel turpis quis venenatis. Nulla sed tellus velit. Donec erat libero, tempor et ante eu, eleifend posuere quam. Suspendisse pretium sodales sollicitudin. Vestibulum vel augue a lacus dignissim cursus in rutrum nunc. Sed dignissim, felis sed ullamcorper tempor, ligula quam consequat metus, eget pulvinar neque justo at lectus. Proin elementum ut lacus ut molestie. Vestibulum interdum fringilla eleifend. Integer faucibus ligula et facilisis feugiat. Curabitur rutrum sed massa et aliquet.
+			</Container>
 		</div>
     );
 }

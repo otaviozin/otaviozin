@@ -2,8 +2,8 @@ export default function Navbar(){
     return(
         <header className='navbar'>
                 <a href='/'>Home</a>
-                <a href='#'>About</a>
-                <a href='#'>Contact</a>
+                <a href='/about'>About</a>
+                <a href='/contact'>Contact</a>
         </header>
     );
 }
