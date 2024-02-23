@@ -1,0 +1,30 @@
+// Colors
+$primary-color: #212121;
+$text-color: #fff;
+$container-color: #2c2c2c;
+
+*{
+  	padding: 0;
+ 	margin: 0;
+	color: $text-color;
+	text-decoration: none;
+}
+
+body{
+	background-color: $primary-color;
+}
+
+.navbar{
+	background-color: $primary-color;
+	display: flex;
+	justify-content: space-around;
+	padding: 15px;
+}
+
+.container{
+	margin: 10px;
+	padding: 10px;
+	background-color: $container-color;
+	border: 2px #555555 solid;
+	border-radius: 8px;
+}
