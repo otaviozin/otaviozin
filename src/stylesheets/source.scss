@@ -1,7 +1,7 @@
 // Colors
 $primary-color: #212121;
 $text-color: #fff;
-$container-color: #3d3d3d;
+$container-color: #2c2c2c;
 
 *{
   	padding: 0;
@@ -22,14 +22,9 @@ body{
 }
 
 .container{
-	background-color: $container-color;
-	padding: 10px;
-	border-radius: 8px;
-}
-
-.border{
 	margin: 10px;
-	padding: 2px;
-	background: linear-gradient(0deg, rgba(0,252,255,1) 0%, rgba(57,255,20,1) 100%);
+	padding: 10px;
+	background-color: $container-color;
+	border: 2px #555555 solid;
 	border-radius: 8px;
 }

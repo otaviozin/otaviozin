@@ -17,15 +17,10 @@ body {
 }
 
 .container {
-  background-color: #3d3d3d;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.border {
   margin: 10px;
-  padding: 2px;
-  background: linear-gradient(0deg, rgb(0, 252, 255) 0%, rgb(57, 255, 20) 100%);
+  padding: 10px;
+  background-color: #2c2c2c;
+  border: 2px #555555 solid;
   border-radius: 8px;
 }
 
