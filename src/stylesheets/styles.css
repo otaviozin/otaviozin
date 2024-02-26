@@ -9,6 +9,10 @@ body {
   background-color: #212121;
 }
 
+.text-gray {
+  color: #7e7e7e;
+}
+
 .navbar {
   background-color: #212121;
   display: flex;
@@ -21,6 +25,22 @@ body {
   padding: 10px;
   background-color: #2c2c2c;
   border: 2px #555555 solid;
+  border-radius: 8px;
+}
+
+.container h3 {
+  font-weight: normal;
+}
+
+.container-header {
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+}
+
+.sub-container {
+  background-color: #212121;
+  padding: 10px;
   border-radius: 8px;
 }
 
