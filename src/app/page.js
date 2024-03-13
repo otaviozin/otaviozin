@@ -1,53 +1,68 @@
-'use client'
-
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 import Navbar from '@/components/Navbar';
-import Container from '@/components/Container';
+import Projects from '@/components/Projects';
 
-import { getUser } from '@/api/getUserGithub';
+//Icons imports
+import { FiLinkedin } from 'react-icons/fi';
+import { FiGithub } from 'react-icons/fi';
+
+//Image imports
+import nextLogo from '../../public/stackImages/nextjs-logo.png'
+import sassLogo from '../../public/stackImages/sass-logo.png'
 
 export default function Home() {
-	const [user, setUser] = useState();
-	
-	useEffect(() => {
-		const fetchData = async () => {
-			try{
-				const res = await getUser();
-				const data = await res.data;
-				setUser(data);
-			}
-			catch(error){
-				console.error(error);
-			}
-		}
-		fetchData();
-	}, []);
-
-    return (
+	return (
 		<div>
 			<Navbar />
-			{user && (
-				<Container>
-					<div className='container-header'>
-						<Image
-							src={user.avatar_url}
-							width={128}
-							height={128}
-							alt='Profile Image'
-							style={{borderRadius: 100}}
-						/>
-						<div style={{marginTop: 20}}>
-							<h3>{user.name}</h3>
-							<h3 className='text-gray'>@{user.login}</h3>
-						</div>
-					</div>
-					<div className='sub-container'>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in lectus id metus molestie pharetra. Praesent tempus vitae augue quis imperdiet. Ut dui nulla, mattis et pellentesque nec, iaculis a enim. Phasellus posuere, diam sed congue commodo, dolor purus tempus eros, bibendum feugiat nisl urna sed turpis. Pellentesque erat quam, cursus ac tempus ac, iaculis vitae libero. Maecenas maximus sit amet lorem a gravida. Vestibulum cursus tortor id neque rhoncus, maximus egestas libero convallis. Duis rutrum turpis vitae accumsan consequat. Nulla commodo nec ex eget convallis. Phasellus tempus sapien interdum orci sagittis, ac scelerisque ligula fermentum. Ut risus eros, auctor eget nisl vel, aliquet vulputate elit. Nam auctor in enim sed molestie. Nullam finibus, eros eu euismod sodales, ante arcu mollis nunc, at molestie nunc orci in quam. Ut pretium imperdiet neque non finibus. Quisque eget augue tristique, ultricies nulla in, vulputate tellus. Etiam tempor viverra nulla, sit amet dignissim leo aliquam eu.</p>
-					</div>
-				</Container>
-			)}
+			<section className='aboutSection'>
+				<Image
+					src='https://avatars.githubusercontent.com/u/60949367?v=4'
+					alt='GitHub profile image'
+					width={200}
+					height={200}
+					priority={true}
+					className='profileImage'
+				/>
+				<div>
+					<h4>Front-end | JavaScript</h4>
+					<h1>Otávio Pereira</h1>
+					<p>Estudante de Análise e Desenvolvimento de Sistemas na FATEC Jundiaí</p>
+				</div>
+			</section>
+			<section id='about' className='stackSection'>
+				<Image
+					src={nextLogo}
+					alt='Next.js logo'
+					priority={true}
+					width={150}
+					height={150}
+				/>
+				<h3>Next.js</h3>
+				<p>Desenvolvimento utilizando Next.js em aplicações web baseados em React</p>
+				<Image
+					src={sassLogo}
+					alt='Sass logo'
+					priority={true}
+					width={150}
+					height={150}
+				/>
+				<h3>Sass</h3>
+				<p>Desenvolvimento prático adicionando recursos de variáveis, funções e operações dentro do CSS.</p>
+			</section>
+			<Projects />
+			<section id='contact' className='contactSection'>
+				<h1>Me segue nas redes :D</h1>
+				<p>No GitHub você consegue acompanhar o progresso dos meus projetos e ver meu progresso de perto</p>
+				<div className='contactLinks'>
+					<a href='https://github.com/otaviozin'>
+						<FiGithub />
+					</a>
+					<a href='https://www.linkedin.com/in/otavio-opereira'>
+						<FiLinkedin />
+					</a>
+				</div>
+			</section>
 		</div>
-    );
+	);
 }

@@ -1,9 +1,14 @@
-export default function Navbar(){
-    return(
+export default function Navbar() {
+    return (
         <header className='navbar'>
-                <a href='/'>Home</a>
-                <a href='/about'>About</a>
-                <a href='/contact'>Contact</a>
+            <nav className='navLogo'>
+                <a href='/'>Dev Otávio</a>
+            </nav>
+            <nav className='navLinks'>
+                <a href='#about'>Sobre</a>
+                <a href='#projects'>Projetos</a>
+                <a href='#contact'>Contato</a>
+            </nav>
         </header>
     );
 }
