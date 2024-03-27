@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, a, p{
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    background-color: #11071F;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1A0B2E;
+    padding: 15px;
+}
+
+.navLinks{
+    display: flex;
+    gap: 30px;
+}
+
+.container{
+    margin: 20px;
+}
+
+.bioSection h1, p{
+    margin-top: 20px;
+}
