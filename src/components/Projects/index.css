@@ -1,0 +1,26 @@
+.repoSection {
+    margin-top: 40px;
+}
+
+.repoCard {
+    margin-top: 20px;
+    background-color: #261045;
+    border-radius: 10px;
+    padding: 10px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.repoCard a {
+    background-color: #693b93;
+    padding: 10px;
+    border: 1px solid #261045;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.repoCard a:hover {
+    background-color: #5b1b97;
+}
