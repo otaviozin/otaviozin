@@ -1,33 +1,64 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, a, p{
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+p {
     color: white;
     text-decoration: none;
 }
 
-body{
-    background-color: #11071F;
+body {
+    background-color: #11071f;
 }
 
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
-    background-color: #1A0B2E;
+    background-color: #1a0b2e;
     padding: 15px;
 }
 
-.navLinks{
+.navLinks {
     display: flex;
     gap: 30px;
 }
 
-.container{
+.container {
     margin: 20px;
 }
 
-.bioSection h1, p{
+.bioSection {
     margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.bioHeader {
+    margin-bottom: 20px;
+}
+
+.bioHeader p {
+    font-size: 11pt;
+}
+
+.stackSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stackCard {
+    background-color: #2c1250;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    height: 90px;
+    align-items: center;
 }
