@@ -1,5 +1,9 @@
 import Image from 'next/image';
 
+import { FaGithub } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaTwitter } from 'react-icons/fa';
+
 import Navbar from '@/components/Navbar';
 import Projects from '@/components/Projects';
 
@@ -42,46 +46,29 @@ export default function Home() {
                     <div className='stackCard'>
                         <Image
                             src={NextLogo}
-                            width={90}
+                            width={70}
                             height={70}
                             alt='Next.js logo'
                         />
-                        <div>
-                            <h2>Next.js</h2>
-                            <p>
-                                Desenvolvimento web utilizando ReactJS e Next.js
-                            </p>
-                        </div>
+                        <h2>Next.js</h2>
                     </div>
                     <div className='stackCard'>
                         <Image
                             src={FirebaseLogo}
-                            width={90}
+                            width={70}
                             height={70}
                             alt='Firebase logo'
                         />
-                        <div>
-                            <h2>Firebase</h2>
-                            <p>
-                                Autenticação de usuários e armazenamento de
-                                dados com Firestore
-                            </p>
-                        </div>
+                        <h2>Firebase</h2>
                     </div>
                     <div className='stackCard'>
                         <Image
                             src={TailwindLogo}
-                            width={90}
+                            width={70}
                             height={70}
                             alt='Tailwind logo'
                         />
-                        <div>
-                            <h2>Tailwind</h2>
-                            <p>
-                                Framework CSS para desenvolvimento de sites e
-                                apps baseados em HTML
-                            </p>
-                        </div>
+                        <h2>Tailwind</h2>
                     </div>
                     <div className='stackCard'>
                         <h1 style={{ fontSize: 70 }}>?</h1>
@@ -95,6 +82,31 @@ export default function Home() {
                     </div>
                 </section>
                 <Projects />
+                <section id='contactSection' className='contactSection'>
+                    <h1>Contato</h1>
+                    <p>
+                        Atualmente estou em busca de estágio. Caso queira entrar
+                        em contato comigo entre em contato pelo email ou redes
+                        sociais
+                    </p>
+                    <div className='contactIcons'>
+                        <a href='https://github.com/otaviozin' target='__blank'>
+                            <FaGithub />
+                        </a>
+                        <a
+                            href='https://www.linkedin.com/in/otavio-opereira/'
+                            target='__blank'
+                        >
+                            <FaLinkedin />
+                        </a>
+                        <a
+                            href='https://twitter.com/otaviozinn'
+                            target='__blank'
+                        >
+                            <FaTwitter />
+                        </a>
+                    </div>
+                </section>
             </div>
         </div>
     );
