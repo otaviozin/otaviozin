@@ -28,10 +28,8 @@ export default function Projects() {
                 repos.map((repo) => {
                     return (
                         <div key={repo.id} className='repoCard'>
-                            <div>
-                                <h1>{repo.name}</h1>
-                                <p>{repo.description}</p>
-                            </div>
+                            <h2>{repo.name}</h2>
+                            <p>{repo.description}</p>
                             <a
                                 target='_blank'
                                 rel='noreferrer'

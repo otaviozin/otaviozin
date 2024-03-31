@@ -6,7 +6,7 @@ export default function Navbar() {
             <a href='/'>Icon</a>
             <div className='navLinks'>
                 <a href='/'>Início</a>
-                <a href='#projects'>Repos</a>
+                <a href='#projects'>Projetos</a>
             </div>
         </nav>
     );
