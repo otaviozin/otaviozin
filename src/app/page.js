@@ -10,101 +10,138 @@ import Projects from '@/components/Projects';
 import NextLogo from '../../public/stackImages/nextjs-logo.png';
 import FirebaseLogo from '../../public/stackImages/Firebase-logo.png';
 import TailwindLogo from '../../public/stackImages/tailwind-logo.png';
+import ReactLogo from '../../public/stackImages/react-logo.png';
+import SassLogo from '../../public/stackImages/sass-logo.png';
 
 export default function Home() {
     return (
         <div>
-            <Navbar />
             <div className='container'>
                 <section id='profileSection' className='profileSection'>
-                    <Image
-                        src='https://avatars.githubusercontent.com/u/60949367?v=4'
-                        height={128}
-                        width={128}
-                        alt='Profile image from GitHub'
-                        style={{ borderRadius: 70 }}
-                        priority='true'
-                    />
+                    <div>
+                        <Image
+                            src='https://avatars.githubusercontent.com/u/60949367?v=4'
+                            height={128}
+                            width={128}
+                            alt='Profile image from GitHub'
+                            style={{ borderRadius: 20, marginTop: 30 }}
+                            priority='true'
+                        />
+                        <div className='contactIcons'>
+                            <a
+                                href='https://github.com/otaviozin'
+                                target='__blank'
+                            >
+                                <FaGithub />
+                            </a>
+                            <a
+                                href='https://www.linkedin.com/in/otavio-opereira/'
+                                target='__blank'
+                            >
+                                <FaLinkedin />
+                            </a>
+                            <a
+                                href='https://twitter.com/otaviozinn'
+                                target='__blank'
+                            >
+                                <FaTwitter />
+                            </a>
+                        </div>
+                    </div>
                     <div className='profileName'>
-                        <h2>Otávio</h2>
-                        <h2>Pereira</h2>
+                        <p className='textSecondary'>Oi,</p>
+                        <p className='fontLarge'>meu nome é Otávio,</p>
+                        <p className='fontLarge'>sou desenvolvedor front-end</p>
+                        <p
+                            className='fontSmall textMuted'
+                            style={{ marginTop: 8 }}
+                        >
+                            Atualmente estudante da FATEC Dep. Ary Fossen (FATEC
+                            JUNDIAÍ)
+                        </p>
                     </div>
                 </section>
-                <section className='bioSection'>
-                    <div className='bioHeader'>
-                        <h1>Desenvolvedor Front-End</h1>
-                        <p>Atualmente estudando na FATEC Jundiaí</p>
-                    </div>
-                    <p>
-                        Técnico em Desenvolvimento de Sistemas formado na ETEC
-                        Vasco Antônio Venchiarutti, desenvolvendo sites e outros
-                        projetos front-end desde 2021.
+                <section id='about' className='aboutSection'>
+                    <p className='textSecondary' style={{ marginBottom: 5 }}>
+                        Sobre
+                    </p>
+                    <h1>Como comecei na carreira de programação...</h1>
+                    <p className='fontSmall textMuted' style={{ marginTop: 8 }}>
+                        Desde pequeno tenho contato com a tecnologia e
+                        principalmente computadores, então desenvolvi o
+                        interesse por programação. Em 2020 ingressei na ETEC
+                        Vasco Antônio Venchiarutti, onde me formei Técnico em
+                        Desenvolvimento de Sistemas. Atualmente curso Análise e
+                        Desenvolvimento de Sistemas na FATEC Dep. Ary Fossen
+                        (FATEC Jundiaí).
                     </p>
                 </section>
-                <section className='stackSection'>
-                    <h1>Stack</h1>
-                    <div className='stackCard'>
-                        <Image
-                            src={NextLogo}
-                            width={70}
-                            height={70}
-                            alt='Next.js logo'
-                        />
-                        <h2>Next.js</h2>
-                    </div>
-                    <div className='stackCard'>
-                        <Image
-                            src={FirebaseLogo}
-                            width={70}
-                            height={70}
-                            alt='Firebase logo'
-                        />
-                        <h2>Firebase</h2>
-                    </div>
-                    <div className='stackCard'>
-                        <Image
-                            src={TailwindLogo}
-                            width={70}
-                            height={70}
-                            alt='Tailwind logo'
-                        />
-                        <h2>Tailwind</h2>
-                    </div>
-                    <div className='stackCard'>
-                        <h1 style={{ fontSize: 70 }}>?</h1>
+                <section id='career' className='careerSection'>
+                    <p className='textSecondary' style={{ marginBottom: 5 }}>
+                        Carreira
+                    </p>
+                    <h1>Formações</h1>
+                    <div className='careerItems'>
                         <div>
-                            <h2>Em breve...</h2>
+                            <p className='fontSmall textMuted'>
+                                Fev. 2020 - Dez. 2022
+                            </p>
+                            <p>Técnico em Desenvolvimento de Sistemas</p>
+                        </div>
+                        <div>
+                            <p className='fontSmall textMuted'>
+                                Ago. 2023 - Presente
+                            </p>
                             <p>
-                                Volte aqui em outro momento, quem sabe a stack
-                                tenha recebido uma tecnologia nova :D
+                                Tecnólogo em Análise e Desenvolvimento de
+                                Sistemas
                             </p>
                         </div>
                     </div>
                 </section>
-                <Projects />
-                <section id='contactSection' className='contactSection'>
-                    <h1>Contato</h1>
-                    <p>
-                        Atualmente estou em busca de estágio. Caso queira entrar
-                        em contato comigo entre em contato pelo email ou redes
-                        sociais
+                <section id='projects' className='repoSection'>
+                    <p className='textSecondary' style={{ marginBottom: 5 }}>
+                        Projetos
                     </p>
-                    <div className='contactIcons'>
-                        <a href='https://github.com/otaviozin' target='__blank'>
-                            <FaGithub />
-                        </a>
-                        <a
-                            href='https://www.linkedin.com/in/otavio-opereira/'
-                            target='__blank'
-                        >
-                            <FaLinkedin />
-                        </a>
-                        <a
-                            href='https://twitter.com/otaviozinn'
-                            target='__blank'
-                        >
-                            <FaTwitter />
-                        </a>
+                    <h1>Projetos e estudos</h1>
+                    <Projects />
+                </section>
+                <section className='stackSection'>
+                    <p className='textSecondary' style={{ marginBottom: 5 }}>
+                        Skills
+                    </p>
+                    <h1>Tecnologias que utilizo</h1>
+                    <div className='stackImages'>
+                        <Image
+                            src={NextLogo}
+                            width={48}
+                            height={48}
+                            alt='Next.js logo'
+                        />
+                        <Image
+                            src={FirebaseLogo}
+                            width={48}
+                            height={48}
+                            alt='Google Firebase logo'
+                        />
+                        <Image
+                            src={TailwindLogo}
+                            width={48}
+                            height={48}
+                            alt='Tailwind logo'
+                        />
+                        <Image
+                            src={ReactLogo}
+                            width={48}
+                            height={48}
+                            alt='React logo'
+                        />
+                        <Image
+                            src={SassLogo}
+                            width={48}
+                            height={48}
+                            alt='Sass logo'
+                        />
                     </div>
                 </section>
             </div>
