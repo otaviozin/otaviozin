@@ -112,7 +112,7 @@ export default function Home() {
                             alt='Next.js logo'
                         />
                         <Image
-                            src='/assets/Firebase-logo.png'
+                            src='/assets/firebase-logo.png'
                             width={48}
                             height={48}
                             alt='Google Firebase logo'
