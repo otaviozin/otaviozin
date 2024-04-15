@@ -1,5 +1,4 @@
 'use client';
-import './index.css';
 
 import { useState, useEffect } from 'react';
 
@@ -22,24 +21,23 @@ export default function Projects() {
     }, []);
 
     return (
-        <section id='projects' className='repoSection'>
-            <h1>Projetos</h1>
+        <div className='repoList'>
             {repos &&
                 repos.map((repo) => {
                     return (
-                        <div key={repo.id} className='repoCard'>
-                            <h2>{repo.name}</h2>
-                            <p>{repo.description}</p>
-                            <a
-                                target='_blank'
-                                rel='noreferrer'
-                                href={repo.html_url}
-                            >
-                                Ver no GitHub
-                            </a>
-                        </div>
+                        <a
+                            key={repo.id}
+                            href={repo.html_url}
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            <div className='repoCard'>
+                                <h2>{repo.name}</h2>
+                                <p>{repo.description}</p>
+                            </div>
+                        </a>
                     );
                 })}
-        </section>
+        </div>
     );
 }
