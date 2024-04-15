@@ -106,31 +106,31 @@ export default function Home() {
                     <h1>Tecnologias que utilizo</h1>
                     <div className='stackImages'>
                         <Image
-                            src='../../public/static/nextjs-logo.png'
+                            src='../../public/assets/nextjs-logo.png'
                             width={48}
                             height={48}
                             alt='Next.js logo'
                         />
                         <Image
-                            src='../../public/static/Firebase-logo.png'
+                            src='../../public/assets/Firebase-logo.png'
                             width={48}
                             height={48}
                             alt='Google Firebase logo'
                         />
                         <Image
-                            src='../../public/static/tailwind-logo.png'
+                            src='../../public/assets/tailwind-logo.png'
                             width={48}
                             height={48}
                             alt='Tailwind logo'
                         />
                         <Image
-                            src='../../public/static/react-logo.png'
+                            src='../../public/assets/react-logo.png'
                             width={48}
                             height={48}
                             alt='React logo'
                         />
                         <Image
-                            src='../../public/static/sass-logo.png'
+                            src='../../public/assets/sass-logo.png'
                             width={48}
                             height={48}
                             alt='Sass logo'
