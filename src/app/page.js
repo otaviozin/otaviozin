@@ -4,14 +4,7 @@ import { FaGithub } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaTwitter } from 'react-icons/fa';
 
-import Navbar from '@/components/Navbar';
 import Projects from '@/components/Projects';
-
-import NextLogo from '../../public/stackImages/nextjs-logo.png';
-import FirebaseLogo from '../../public/stackImages/Firebase-logo.png';
-import TailwindLogo from '../../public/stackImages/tailwind-logo.png';
-import ReactLogo from '../../public/stackImages/react-logo.png';
-import SassLogo from '../../public/stackImages/sass-logo.png';
 
 export default function Home() {
     return (
@@ -113,31 +106,31 @@ export default function Home() {
                     <h1>Tecnologias que utilizo</h1>
                     <div className='stackImages'>
                         <Image
-                            src={NextLogo}
+                            src='../../public/stackImages/nextjs-logo.png'
                             width={48}
                             height={48}
                             alt='Next.js logo'
                         />
                         <Image
-                            src={FirebaseLogo}
+                            src='../../public/stackImages/Firebase-logo.png'
                             width={48}
                             height={48}
                             alt='Google Firebase logo'
                         />
                         <Image
-                            src={TailwindLogo}
+                            src='../../public/stackImages/tailwind-logo.png'
                             width={48}
                             height={48}
                             alt='Tailwind logo'
                         />
                         <Image
-                            src={ReactLogo}
+                            src='../../public/stackImages/react-logo.png'
                             width={48}
                             height={48}
                             alt='React logo'
                         />
                         <Image
-                            src={SassLogo}
+                            src='../../public/stackImages/sass-logo.png'
                             width={48}
                             height={48}
                             alt='Sass logo'
