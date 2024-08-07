@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-
 import { getRepos } from '@/api/getRepos';
 
 export default function Projects() {

@@ -94,6 +94,7 @@ a, h1, h2, h3, h4, h5, p {
   display: flex;
   gap: 8px;
   height: auto;
+  flex-direction: column;
 }
 
 .repoCard {
@@ -125,7 +126,11 @@ a, h1, h2, h3, h4, h5, p {
     justify-content: space-between;
   }
   .repoList {
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .repoCard {
+    min-height: 69px;
   }
 }
 @media (min-width: 860px) {
@@ -135,9 +140,6 @@ a, h1, h2, h3, h4, h5, p {
   .navbar {
     justify-content: space-between;
   }
-  .repoList {
-    justify-content: center;
-  }
 }
 @media (min-width: 1400px) {
   .container {
@@ -146,33 +148,30 @@ a, h1, h2, h3, h4, h5, p {
   .navbar {
     justify-content: space-around;
   }
-  .repoList {
-    justify-content: center;
-  }
 }
 @media (min-width: 1650px) {
   .container {
-    margin: auto 400px;
+    margin: auto 250px;
   }
   .navbar {
     justify-content: space-around;
   }
   .repoList {
-    justify-content: center;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .repoCard {
-    width: 330px;
+    width: 320px;
   }
 }
 @media (min-width: 1920px) {
   .container {
-    margin: auto 500px;
+    margin: auto 350px;
   }
   .navbar {
     justify-content: space-around;
   }
   .repoList {
-    justify-content: center;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .repoCard {
     width: 330px;
