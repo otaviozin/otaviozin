@@ -49,8 +49,7 @@ export default function Home() {
                             className='fontSmall textMuted'
                             style={{ marginTop: 8 }}
                         >
-                            Atualmente estudante da FATEC Dep. Ary Fossen (FATEC
-                            JUNDIAÍ)
+                            Estudante de Engenharia de Software
                         </p>
                     </div>
                 </section>
@@ -64,9 +63,7 @@ export default function Home() {
                         principalmente computadores, então desenvolvi o
                         interesse por programação. Em 2020 ingressei na ETEC
                         Vasco Antônio Venchiarutti, onde me formei Técnico em
-                        Desenvolvimento de Sistemas. Atualmente curso Análise e
-                        Desenvolvimento de Sistemas na FATEC Dep. Ary Fossen
-                        (FATEC Jundiaí).
+                        Desenvolvimento de Sistemas. Atualmente curso Engenharia de Software na Faculdade Anhanguera.
                     </p>
                 </section>
                 <section id='career' className='careerSection'>
@@ -86,8 +83,7 @@ export default function Home() {
                                 Ago. 2023 - Presente
                             </p>
                             <p>
-                                Tecnólogo em Análise e Desenvolvimento de
-                                Sistemas
+                                Bacharelado em Engenharia de Software
                             </p>
                         </div>
                     </div>
