@@ -11,8 +11,8 @@
 
 ![HTML5](https://img.shields.io/badge/-HTML5-000000?style=flat&logo=HTML5)
 ![CSS](https://img.shields.io/badge/-CSS-000000?style=flat&logo=CSS3&logoColor=1572B6)
-![Typescript](https://img.shields.io/badge/Typescript-000000?style=flat&logo=typescript)
-![Next.js](https://img.shields.io/badge/Next-000000?style=flat&logo=nextdotjs)
+![JavaScript](https://img.shields.io/badge/JavaScript-000000?style=flat&logo=JavaScript)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs)
 ![Node.js](https://img.shields.io/badge/Node.js-000000?style=flat&logo=nodedotjs)
 
 **Utilidades**
@@ -31,6 +31,6 @@
 
 ## Onde me encontrar
 
-[![Linkedin](https://img.shields.io/badge/-Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/otavio-ppereira/)](https://www.linkedin.com/in/otavio-ppereira/)
-[![Gmail Badge](https://img.shields.io/badge/-Gmail-EA4335?style=flat-square&logo=Gmail&logoColor=white&link=mailto:otaviopereira2004@gmail.com)](mailto:otaviopereira2004@gmail.com)
-[![GitHub](https://img.shields.io/github/followers/otaviozin?label=follow&style=social)](https://github.com/otaviozin)
+[![Linkedin](https://img.shields.io/badge/-Linkedin-blue?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/otavio-ppereira/)](https://www.linkedin.com/in/otavio-ppereira/)
+[![Gmail Badge](https://img.shields.io/badge/-Gmail-EA4335?style=flat&logo=Gmail&logoColor=white&link=mailto:otaviopereira2004@gmail.com)](mailto:otaviopereira2004@gmail.com)
+[![GitHub](https://img.shields.io/github/followers/otaviozin?label=follow&style=flat)](https://github.com/otaviozin)
