@@ -30,4 +30,4 @@
 
 [![Linkedin](https://img.shields.io/badge/-Linkedin-blue?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/otavio-ppereira/)](https://www.linkedin.com/in/otavio-ppereira/)
 [![Gmail Badge](https://img.shields.io/badge/-Gmail-EA4335?style=flat&logo=Gmail&logoColor=white&link=mailto:otaviopereira2004@gmail.com)](mailto:otaviopereira2004@gmail.com)
-[![GitHub](https://img.shields.io/github/followers/otaviozin?label=follow&style=flat)](https://github.com/otaviozin)
+[![GitHub](https://img.shields.io/github/followers/otaviozin?label=otaviozin&style=flat)](https://github.com/otaviozin)
