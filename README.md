@@ -2,8 +2,8 @@
 
 - 🤔 Construindo
 - 🎓 Estudando Engenharia de Software na Anhanguera.
-- 💼 Estagiário em Desenvolvimento de Sistemas na ASTRA.
-- 🌱 Estudando conceitos sobre conceitos importantes no front-end com ênfase no UI/UX.
+- 💼 Analista de Software Jr na ASTRA.
+- 🌱 Estudando Golang.
 
 ## Minhas Skills
 
