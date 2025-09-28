@@ -1,0 +1,10 @@
+{
+  "Navigation": {
+    "home": "Início",
+    "skills": "Skills",
+    "projects": "Projetos"
+  },
+  "Home": {
+    "title": "Olá Mundo!"
+  }
+}
