@@ -32,13 +32,10 @@ export default async function RootLayout({ children, params }: Props) {
   if (!hasLocale(routing.locales, locale)) notFound();
 
   return (
-    <html lang='pt-br'>
+    <html lang='pt-br' className='dark' suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Navigation />
-        <main className='pt-18'>
-        {children}
-
-        </main>
+        <main className='pt-18'>{children}</main>
       </body>
     </html>
   );

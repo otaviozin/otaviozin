@@ -7,6 +7,9 @@
     "contact": "Contato"
   },
   "Home": {
-    "title": "Olá Mundo!"
+    "greetings": "Olá, eu me chamo",
+    "my_name": "Otávio",
+    "job_position": "Sou Desenvolvedor Fullsttack",
+    "presentation": "Atualmente uilizo Next.js e Golang como linguagens principais juntamente com Docker e PostgreSQL, criando sistemas web escaláveis e de alta performance. Possuo grande interesse em Arquitetura de Software e prossigo estudando para obter conhecimentos avançados sobre MVC, Layers, Monolitos e Microserviços, assim como a conversão de sistemas Monolíticos para Microserviços"
   }
 }
