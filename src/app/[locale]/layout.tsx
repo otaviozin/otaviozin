@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-import './globals.css';
+import '../globals.css';
 import React from 'react';
 import { hasLocale } from 'next-intl';
 import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
+import { Navigation } from '@/components/layout/navigation';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -32,7 +33,13 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang='pt-br'>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Navigation />
+        <main className='pt-18'>
+        {children}
+
+        </main>
+      </body>
     </html>
   );
 }

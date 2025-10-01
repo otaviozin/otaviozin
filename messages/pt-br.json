@@ -1,8 +1,10 @@
 {
   "Navigation": {
     "home": "Início",
+    "about": "Sobre",
     "skills": "Skills",
-    "projects": "Projetos"
+    "projects": "Projetos",
+    "contact": "Contato"
   },
   "Home": {
     "title": "Olá Mundo!"
