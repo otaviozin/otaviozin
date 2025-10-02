@@ -1,7 +1,6 @@
 import { SkillsCards } from '@/components/home/skills-cards';
 import { AuroraText } from '@/components/ui/aurora-text';
 import { HyperText } from '@/components/ui/hyper-text';
-import { Marquee } from '@/components/ui/marquee';
 import { useTranslations } from 'next-intl';
 
 export default function Home() {
