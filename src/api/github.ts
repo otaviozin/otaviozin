@@ -10,8 +10,8 @@ export const GetUser = async () => {
   });
 };
 
-export const GetUserRepos = async () => {
-  return await octokit.request('GET /users/{username}/repos', {
-    username: process.env.NEXT_PUBLIC_GITHUB_USERNAME as string,
-  });
-};
+// export const GetUserRepos = async () => {
+//   return await octokit.request('GET /users/{username}/repos', {
+//     username: process.env.NEXT_PUBLIC_GITHUB_USERNAME as string,
+//   });
+// };

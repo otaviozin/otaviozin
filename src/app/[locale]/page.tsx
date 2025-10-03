@@ -1,4 +1,4 @@
-import { GetUser, GetUserRepos } from '@/api/github';
+import { GetUser } from '@/api/github';
 import { SkillsCards } from '@/components/home/skills/skills-cards';
 import { AuroraText } from '@/components/ui/aurora-text';
 import { useTranslations } from 'next-intl';
@@ -10,7 +10,6 @@ import { SkillsBeam } from '@/components/home/skills/skills-beam';
 export default function Home() {
   const t = useTranslations('Home');
 
-  const repos = use(GetUserRepos());
   const user = use(GetUser());
 
   return (

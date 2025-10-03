@@ -2,6 +2,7 @@ import { cn } from '@/lib/utils';
 import { Marquee } from '../../ui/marquee';
 import { ShineBorder } from '@/components/ui/shine-border';
 import { AuroraText } from '@/components/ui/aurora-text';
+import Image from 'next/image';
 
 const frontEnd = [
   {
@@ -63,11 +64,11 @@ const ReviewCard = ({
       <div className='flex flex-row items-center gap-2'>
         {imgLight && imgDark ? (
           <>
-            <img className='dark:hidden' width='32' height='32' alt={name} src={imgLight} />
-            <img className='hidden dark:block' width='32' height='32' alt={name} src={imgDark} />
+            <Image className='dark:hidden' width={32} height={32} alt={name} src={imgLight} unoptimized />
+            <Image className='hidden dark:block' width={32} height={32} alt={name} src={imgDark} unoptimized />
           </>
         ) : (
-          <img width='32' height='32' alt={name} src={img!} />
+          <Image width={32} height={32} alt={name} src={img!} unoptimized />
         )}
 
         <div className='flex flex-col'>

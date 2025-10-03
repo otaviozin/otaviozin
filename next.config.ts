@@ -7,8 +7,17 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'avatars.githubusercontent.com',
+        port: '',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.simpleicons.org',
+        port: '',
+        pathname: '**',
       },
     ],
+    qualities: [100],
   },
 };
 

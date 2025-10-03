@@ -1,4 +1,4 @@
-import { Book, Menu, Sunset, Trees, Zap } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
@@ -14,6 +14,7 @@ import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTitle, SheetTrigger
 import { AnimatedThemeToggler } from '../ui/animated-theme-toggler';
 import { useLocale, useTranslations } from 'next-intl';
 import { NavigationWrapper } from './navigation-wrapper';
+import Image from 'next/image';
 
 interface MenuItem {
   title: string;
@@ -60,7 +61,7 @@ export const Navigation = () => {
         <div className='grid grid-cols-3 justify-item-center gap-6 place-items-center'>
           {/* Logo */}
           <a href={logo.url} className='flex items-center gap-2 w-fit'>
-            <img src={logo.src} className='max-h-8 dark:invert' alt={logo.alt} />
+            <Image src={logo.src} className='max-h-8 dark:invert' alt={logo.alt} width={48} height={32} />
             <span className='text-2xl font-semibold tracking-tighter hover:drop-shadow-md'>{logo.title}</span>
           </a>
           <div className='flex items-center'>
@@ -77,7 +78,7 @@ export const Navigation = () => {
         <div className='flex items-center justify-between'>
           {/* Logo */}
           <a href={logo.url} className='flex items-center gap-2'>
-            <img src={logo.src} className='max-h-8 dark:invert' alt={logo.alt} />
+            <Image src={logo.src} className='max-h-8 dark:invert' alt={logo.alt} width={48} height={32} />
             <span className='text-xl font-semibold tracking-tighter drop-shadow-md'>{logo.title}</span>
           </a>
           <Sheet>
@@ -90,7 +91,7 @@ export const Navigation = () => {
               <SheetHeader>
                 <SheetTitle>
                   <a href={logo.url} className='flex items-center gap-2 w-fit'>
-                    <img src={logo.src} className='max-h-8 dark:invert' alt={logo.alt} />
+                    <Image src={logo.src} className='max-h-8 dark:invert' alt={logo.alt} width={48} height={32} />
                     <span className='text-lg font-semibold tracking-tighter'>{logo.title}</span>
                   </a>
                 </SheetTitle>
