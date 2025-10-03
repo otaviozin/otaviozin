@@ -1,11 +1,12 @@
 import { GetUser, GetUserRepos } from '@/api/github';
-import { SkillsCards } from '@/components/home/skills-cards';
+import { SkillsCards } from '@/components/home/skills/skills-cards';
 import { AuroraText } from '@/components/ui/aurora-text';
 import { HyperText } from '@/components/ui/hyper-text';
 import { useTranslations } from 'next-intl';
 import { use } from 'react';
 import Image from 'next/image';
 import { Experience } from '@/components/home/experience';
+import { SkillsBeam } from '@/components/home/skills/skills-beam';
 
 export default function Home() {
   const t = useTranslations('Home');
@@ -35,6 +36,13 @@ export default function Home() {
       </div>
       <div className='mt-6'>
         <Experience />
+      </div>
+      <div className='mt-6'>
+        <h1 className='scroll-m-20 text-4xl font-extrabold tracking-tight text-balance'>
+          <AuroraText colors={['#059669', '#14532d', '#047857', '#065f46']}>Skills</AuroraText>
+        </h1>
+        <SkillsBeam />
+        <SkillsCards />
       </div>
     </div>
   );
