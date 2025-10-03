@@ -38,7 +38,7 @@ export default async function RootLayout({ children, params }: Props) {
         <Particles className='fixed inset-0 -z-10 h-screen w-screen dark:invert' color='#000000' />
 
         <Navigation />
-        <main className='pt-18'>{children}</main>
+        <main className='py-18'>{children}</main>
       </body>
     </html>
   );

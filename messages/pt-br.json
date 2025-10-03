@@ -10,7 +10,10 @@
     "greetings": "Olá, eu me chamo",
     "my_name": "Otávio",
     "job_position": "Desenvolvedor Fullstack",
-    "presentation": "Atualmente uilizo Next.js e Golang como linguagens principais juntamente com Docker e PostgreSQL, criando sistemas web escaláveis e de alta performance. Possuo grande interesse em Arquitetura de Software e prossigo estudando para obter conhecimentos avançados sobre MVC, Layers, Monolitos e Microserviços, assim como a conversão de sistemas Monolíticos para Microserviços"
+    "presentation": "Atualmente uilizo Next.js e Golang como linguagens principais juntamente com Docker e PostgreSQL, criando sistemas web escaláveis e de alta performance. Possuo grande interesse em Arquitetura de Software e prossigo estudando para obter conhecimentos avançados sobre MVC, Layers, Monolitos e Microserviços, assim como a conversão de sistemas Monolíticos para Microserviços",
+    "skills": {
+      "desc": "Next.js é meu foco, mas aplico Go, Docker e outras tecnologias para entregar soluções completas e confiáveis."
+    }
   },
   "Experience": {
     "title": "Experiência",

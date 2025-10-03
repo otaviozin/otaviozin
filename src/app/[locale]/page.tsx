@@ -1,7 +1,6 @@
 import { GetUser, GetUserRepos } from '@/api/github';
 import { SkillsCards } from '@/components/home/skills/skills-cards';
 import { AuroraText } from '@/components/ui/aurora-text';
-import { HyperText } from '@/components/ui/hyper-text';
 import { useTranslations } from 'next-intl';
 import { use } from 'react';
 import Image from 'next/image';
@@ -43,8 +42,28 @@ export default function Home() {
         <h1 className='scroll-m-20 text-4xl font-extrabold tracking-tight text-balance'>
           <AuroraText colors={['#059669', '#14532d', '#047857', '#065f46']}>Skills</AuroraText>
         </h1>
-        <SkillsBeam />
-        <SkillsCards />
+        <div className='grid lg:grid-cols-2 gap-4'>
+          <aside className='flex flex-col justify-center gap-10'>
+            <p className='text-muted-foreground text-xl'>
+              Atualmente este projeto faz uso dessas tecnologias, que representam as principais ferramentas do meu dia a
+              dia. São tecnologias que aplico tanto no ambiente de trabalho quanto em projetos pessoais, sempre buscando
+              boas práticas, escalabilidade e qualidade no desenvolvimento.
+            </p>
+            <p className='text-muted-foreground text-xl'>
+              Além disso, essas tecnologias refletem meu foco em entregar soluções modernas, performáticas e alinhadas
+              às necessidades reais de cada projeto.
+            </p>
+          </aside>
+          <SkillsBeam />
+        </div>
+
+        <div className='flex flex-col lg:flex-row items-center gap-4 flex-col-reverse'>
+          <SkillsCards />
+          <p className='text-muted-foreground text-xl'>
+            Além das tecnologias acima, também possuo conhecimento com outras tecnologias. Elas estão separadas por tipo
+            e você pode conferir no card.
+          </p>
+        </div>
       </div>
     </div>
   );
