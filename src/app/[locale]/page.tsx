@@ -15,15 +15,17 @@ export default function Home() {
   const user = use(GetUser());
 
   return (
-    <div className='relative w-full px-3'>
-      <div className='grid lg:grid-cols-2 lg:w-2/3 lg:justify-self-center'>
+    <div className='relative w-full lg:w-2/3 lg:justify-self-center px-3'>
+      <div className='grid lg:grid-cols-2'>
         <div className='text-left grid'>
           <h4 className='scroll-m-20 text-lg font-semibold tracking-tight'>{t('greetings')}</h4>
           <h1 className='scroll-m-20 text-4xl font-extrabold tracking-tight text-balance'>
             <AuroraText colors={['#059669', '#14532d', '#047857', '#065f46']}>{t('my_name')}</AuroraText>
           </h1>
           <p className='text-muted-foreground text-lg mt-3'>{t('job_position')}</p>
-          <p className='leading-7 [&:not(:first-child)]:mt-6'>{t('presentation')}</p>
+          <p className='leading-7 [&:not(:first-child)]:mt-6 text-shadow-lg text-shadow-neutral-300/80 dark:text-shadow-none'>
+            {t('presentation')}
+          </p>
         </div>
         <Image
           className='rounded-full justify-self-center hidden lg:flex'

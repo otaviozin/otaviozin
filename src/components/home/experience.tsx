@@ -55,7 +55,9 @@ export const Experience = () => {
             <div key={roleIdx} className='role-section my-4'>
               <span className='text-muted-foreground'>{role.period}</span>
               <h3 className='text-xl font-bold'>{role.job_title}</h3>
-              <p className='leading-7 dark:text-white/80'>{role.desc}</p>
+              <p className='leading-7 dark:text-white/80 text-shadow-lg text-shadow-neutral-300/80 dark:text-shadow-none'>
+                {role.desc}
+              </p>
             </div>
           ))}
         </div>

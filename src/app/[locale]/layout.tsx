@@ -35,7 +35,7 @@ export default async function RootLayout({ children, params }: Props) {
   return (
     <html lang='pt-br' className='dark' suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Particles className='fixed inset-0 -z-10 h-screen w-screen' />
+        <Particles className='fixed inset-0 -z-10 h-screen w-screen dark:invert' color='#000000' />
 
         <Navigation />
         <main className='pt-18'>{children}</main>
