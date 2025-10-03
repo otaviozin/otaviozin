@@ -6,6 +6,7 @@ import { hasLocale } from 'next-intl';
 import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
 import { Navigation } from '@/components/layout/navigation';
+import { Particles } from '@/components/ui/particles';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -34,6 +35,8 @@ export default async function RootLayout({ children, params }: Props) {
   return (
     <html lang='pt-br' className='dark' suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Particles className='fixed inset-0 -z-10 h-screen w-screen' />
+
         <Navigation />
         <main className='pt-18'>{children}</main>
       </body>

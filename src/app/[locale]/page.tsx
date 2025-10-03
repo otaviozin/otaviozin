@@ -5,12 +5,12 @@ import { HyperText } from '@/components/ui/hyper-text';
 import { useTranslations } from 'next-intl';
 import { use } from 'react';
 import Image from 'next/image';
+import { Experience } from '@/components/home/experience';
 
 export default function Home() {
   const t = useTranslations('Home');
 
   const repos = use(GetUserRepos());
-  console.log(repos);
   const user = use(GetUser());
 
   return (
@@ -34,13 +34,7 @@ export default function Home() {
         />
       </div>
       <div className='mt-6'>
-        <HyperText
-          className='scroll-m-20 text- text-4xl font-extrabold tracking-tight text-balance'
-          animateOnHover={false}
-        >
-          Skills
-        </HyperText>
-        <SkillsCards />
+        <Experience />
       </div>
     </div>
   );
