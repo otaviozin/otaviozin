@@ -64,11 +64,11 @@ const ReviewCard = ({
       <div className='flex flex-row items-center gap-2'>
         {imgLight && imgDark ? (
           <>
-            <Image className='dark:hidden' width='32' height='32' alt={name} src={imgLight} />
-            <Image className='hidden dark:block' width='32' height='32' alt={name} src={imgDark} />
+            <Image className='dark:hidden' width={32} height={32} alt={name} src={imgLight} unoptimized />
+            <Image className='hidden dark:block' width={32} height={32} alt={name} src={imgDark} unoptimized />
           </>
         ) : (
-          <Image width='32' height='32' alt={name} src={img!} />
+          <Image width={32} height={32} alt={name} src={img!} unoptimized />
         )}
 
         <div className='flex flex-col'>
