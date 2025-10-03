@@ -13,6 +13,7 @@ import {
 import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { AnimatedThemeToggler } from '../ui/animated-theme-toggler';
 import { useLocale, useTranslations } from 'next-intl';
+import { NavigationWrapper } from './navigation-wrapper';
 
 interface MenuItem {
   title: string;
@@ -53,7 +54,7 @@ export const Navigation = () => {
   ];
 
   return (
-    <section className='fixed top-0 left-0 w-full py-3 z-50'>
+    <NavigationWrapper>
       {/* Desktop Menu */}
       <nav className='hidden lg:grid px-6 lg:px-12'>
         <div className='grid grid-cols-3 justify-item-center gap-6 place-items-center'>
@@ -106,7 +107,7 @@ export const Navigation = () => {
           </Sheet>
         </div>
       </div>
-    </section>
+    </NavigationWrapper>
   );
 };
 
