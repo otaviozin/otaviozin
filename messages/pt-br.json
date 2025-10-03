@@ -12,7 +12,17 @@
     "job_position": "Desenvolvedor Fullstack",
     "presentation": "Atualmente uilizo Next.js e Golang como linguagens principais juntamente com Docker e PostgreSQL, criando sistemas web escaláveis e de alta performance. Possuo grande interesse em Arquitetura de Software e prossigo estudando para obter conhecimentos avançados sobre MVC, Layers, Monolitos e Microserviços, assim como a conversão de sistemas Monolíticos para Microserviços",
     "skills": {
-      "desc": "Next.js é meu foco, mas aplico Go, Docker e outras tecnologias para entregar soluções completas e confiáveis."
+      "first_desc": [
+        {
+          "text": "Atualmente este projeto faz uso dessas tecnologias, que representam as principais ferramentas do meu dia a dia. São tecnologias que aplico tanto no ambiente de trabalho quanto em projetos pessoais, sempre buscando boas práticas, escalabilidade e qualidade no desenvolvimento."
+        },
+        {
+          "text": "Além disso, essas tecnologias refletem meu foco em entregar soluções modernas, performáticas e alinhadas às necessidades reais de cada projeto."
+        }
+      ],
+      "second_desc": {
+        "text": "Além das tecnologias acima, também possuo conhecimento com outras tecnologias. Elas estão separadas por tipo e você pode conferir no card."
+      }
     }
   },
   "Experience": {
