@@ -1,0 +1,48 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "Home": {
+    "greetings": "Hi, my name is",
+    "my_name": "Otávio",
+    "job_position": "Fullstack Developer",
+    "presentation": "I primarily work with Next.js and Golang, alongside Docker and PostgreSQL, building scalable, high-performance web applications. I have a strong interest in Software Architecture and continuously study advanced concepts such as MVC, layered architecture, Monoliths, and Microservices, including the migration of Monolithic systems to Microservices.",
+    "skills": {
+      "first_desc": [
+        {
+          "text": "This project leverages these technologies, which are central to my daily work. I apply them in both professional and personal projects, always focusing on best practices, scalability, and development quality."
+        },
+        {
+          "text": "These technologies also reflect my commitment to delivering modern, high-performance solutions that meet the real needs of each project."
+        }
+      ],
+      "second_desc": {
+        "text": "In addition to the technologies above, I have experience with other tools and frameworks. They are organized by category and can be explored in the skill cards."
+      }
+    }
+  },
+  "Experience": {
+    "title": "Experience",
+    "experiences": [
+      {
+        "company": "ASTRA S/A",
+        "roles": [
+          {
+            "job_title": "Fullstack Developer",
+            "period": "Jun 2025 - Present",
+            "desc": "Developed web applications using Go, React, PostgreSQL, and Docker. Designed and implemented REST APIs and system integrations. Delivered scalable, high-performance solutions while applying best practices in software architecture and DevOps."
+          },
+          {
+            "job_title": "Systems Development Intern",
+            "period": "Jan 2025 - May 2025",
+            "desc": "Built web interfaces using HTML, CSS, and JavaScript. Created workflows and forms in TOTVS Fluig. Integrated REST APIs and automated internal processes to improve efficiency."
+          }
+        ]
+      }
+    ]
+  }
+}
