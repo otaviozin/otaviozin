@@ -7,6 +7,8 @@ import { routing } from '@/i18n/routing';
 import { notFound } from 'next/navigation';
 import { Navigation } from '@/components/layout/navigation';
 import { Particles } from '@/components/ui/particles';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -38,7 +40,11 @@ export default async function RootLayout({ children, params }: Props) {
         <Particles className='fixed inset-0 -z-10 h-screen w-screen dark:invert' color='#000000' />
         <NextIntlClientProvider>
           <Navigation />
-          <main className='py-18'>{children}</main>
+          <main className='py-18'>
+            {children}
+            <Analytics />
+            <SpeedInsights />
+          </main>
         </NextIntlClientProvider>
       </body>
     </html>
