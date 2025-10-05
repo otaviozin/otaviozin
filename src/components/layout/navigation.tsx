@@ -18,6 +18,17 @@ import { useLocale, useTranslations } from 'next-intl';
 import { NavigationWrapper } from './navigation-wrapper';
 import Image from 'next/image';
 import { useState } from 'react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '../ui/dropdown-menu';
+import { useRouter, usePathname } from 'next/navigation';
+import { Globe } from 'lucide-react';
 
 interface MenuItem {
   title: string;
@@ -30,12 +41,13 @@ interface MenuItem {
 export const Navigation = () => {
   const t = useTranslations('Navigation');
   const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, url: string) => {
     e.preventDefault();
 
-    // Fecha o menu mobile
     setIsSheetOpen(false);
 
     const hash = url.includes('#') ? url.substring(url.indexOf('#')) : url;
@@ -57,6 +69,11 @@ export const Navigation = () => {
         window.history.pushState(null, '', hash);
       }
     }
+  };
+
+  const handleLocaleChange = (newLocale: string) => {
+    const pathWithoutLocale = pathname.replace(`/${locale}`, '');
+    router.push(`/${newLocale}${pathWithoutLocale}`);
   };
 
   const logo = {
@@ -84,6 +101,11 @@ export const Navigation = () => {
       title: t('contact'),
       url: `${locale}/#contact`,
     },
+  ];
+
+  const languages = [
+    { code: 'pt-br', label: 'Português' },
+    { code: 'en', label: 'English' },
   ];
 
   const renderMenuItem = (item: MenuItem) => {
@@ -145,18 +167,43 @@ export const Navigation = () => {
     <NavigationWrapper>
       {/* Desktop Menu */}
       <nav className='hidden lg:grid px-6 lg:px-12'>
-        <div className='grid grid-cols-3 justify-item-center gap-6 place-items-center'>
+        <div className='flex justify-around items-center w-full'>
           {/* Logo */}
           <a href={logo.url} className='flex items-center gap-2 w-fit'>
             <Image src={logo.src} className='max-h-8 dark:invert' alt={logo.alt} width={48} height={32} />
             <span className='text-2xl font-semibold tracking-tighter hover:drop-shadow-md'>{logo.title}</span>
           </a>
+
+          {/* Menu items */}
           <div className='flex items-center'>
             <NavigationMenu>
               <NavigationMenuList>{menu.map((item) => renderMenuItem(item))}</NavigationMenuList>
             </NavigationMenu>
           </div>
-          <AnimatedThemeToggler />
+
+          {/* Theme toggler and language selector */}
+          <div className='flex items-center gap-3'>
+            <AnimatedThemeToggler />
+            <DropdownMenu modal={false}>
+              <DropdownMenuTrigger asChild>
+                <Button variant='ghost' size='icon' className='relative'>
+                  <Globe className='h-5 w-5' />
+                  <span className='sr-only'>Change language</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align='end' className='min-w-[140px]'>
+                <DropdownMenuLabel>{t('lang.label')}</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuRadioGroup value={locale} onValueChange={handleLocaleChange}>
+                  {languages.map((lang) => (
+                    <DropdownMenuRadioItem key={lang.code} value={lang.code}>
+                      {lang.label}
+                    </DropdownMenuRadioItem>
+                  ))}
+                </DropdownMenuRadioGroup>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
         </div>
       </nav>
 
@@ -168,31 +215,54 @@ export const Navigation = () => {
             <Image src={logo.src} className='max-h-8 dark:invert' alt={logo.alt} width={48} height={32} />
             <span className='text-xl font-semibold tracking-tighter drop-shadow-md'>{logo.title}</span>
           </a>
-          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-            <SheetTrigger asChild>
-              <Button variant='ghost' size='icon'>
-                <Menu className='size-4' />
-              </Button>
-            </SheetTrigger>
-            <SheetContent className='overflow-y-auto'>
-              <SheetHeader>
-                <SheetTitle>
-                  <a href={logo.url} className='flex items-center gap-2 w-fit'>
-                    <Image src={logo.src} className='max-h-8 dark:invert' alt={logo.alt} width={48} height={32} />
-                    <span className='text-lg font-semibold tracking-tighter'>{logo.title}</span>
-                  </a>
-                </SheetTitle>
-              </SheetHeader>
-              <div className='flex flex-col gap-6 p-4'>
-                <Accordion type='single' collapsible className='flex w-full flex-col gap-4'>
-                  {menu.map((item) => renderMobileMenuItem(item))}
-                </Accordion>
-              </div>
-              <SheetFooter>
-                <AnimatedThemeToggler />
-              </SheetFooter>
-            </SheetContent>
-          </Sheet>
+
+          <div className='flex items-center gap-2'>
+            <DropdownMenu modal={false}>
+              <DropdownMenuTrigger asChild>
+                <Button variant='ghost' size='icon'>
+                  <Globe className='h-5 w-5' />
+                  <span className='sr-only'>Change language</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align='end' className='min-w-[140px]'>
+                <DropdownMenuLabel>{t('lang.label')}</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuRadioGroup value={locale} onValueChange={handleLocaleChange}>
+                  {languages.map((lang) => (
+                    <DropdownMenuRadioItem key={lang.code} value={lang.code}>
+                      {lang.label}
+                    </DropdownMenuRadioItem>
+                  ))}
+                </DropdownMenuRadioGroup>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+              <SheetTrigger asChild>
+                <Button variant='ghost' size='icon'>
+                  <Menu className='size-4' />
+                </Button>
+              </SheetTrigger>
+              <SheetContent className='overflow-y-auto'>
+                <SheetHeader>
+                  <SheetTitle>
+                    <a href={logo.url} className='flex items-center gap-2 w-fit'>
+                      <Image src={logo.src} className='max-h-8 dark:invert' alt={logo.alt} width={48} height={32} />
+                      <span className='text-lg font-semibold tracking-tighter'>{logo.title}</span>
+                    </a>
+                  </SheetTitle>
+                </SheetHeader>
+                <div className='flex flex-col gap-6 p-4'>
+                  <Accordion type='single' collapsible className='flex w-full flex-col gap-4'>
+                    {menu.map((item) => renderMobileMenuItem(item))}
+                  </Accordion>
+                </div>
+                <SheetFooter>
+                  <AnimatedThemeToggler />
+                </SheetFooter>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </NavigationWrapper>

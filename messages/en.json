@@ -4,7 +4,12 @@
     "about": "About",
     "skills": "Skills",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "lang": {
+      "select": "Select",
+      "selected": "EN",
+      "label": "Languages"
+    }
   },
   "Home": {
     "greetings": "Hi, my name is",
