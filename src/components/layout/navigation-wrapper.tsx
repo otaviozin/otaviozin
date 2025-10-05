@@ -16,8 +16,10 @@ export const NavigationWrapper = ({ children }: { children: React.ReactNode }) =
   return (
     <section
       className={cn(
-        'fixed top-0 left-0 w-full py-3 z-50 transition-colors duration-300',
-        scrolled ? 'bg-white/10 dark:bg-white/1 border-b-1 backdrop-blur-sm shadow-md' : 'bg-transparent'
+        'fixed top-0 left-0 w-full py-3 z-50 transition-all duration-300',
+        scrolled
+          ? 'bg-white/80 dark:bg-black/80 border-b border-border backdrop-blur-2xl backdrop-saturate-150 shadow-lg'
+          : 'bg-transparent'
       )}
     >
       {children}

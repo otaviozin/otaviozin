@@ -13,8 +13,8 @@ export default function Home() {
   const user = use(GetUser());
 
   return (
-    <div className='relative w-full lg:w-2/3 lg:justify-self-center px-3'>
-      <div className='grid lg:grid-cols-2'>
+    <div id='home' className='relative w-full lg:w-2/3 lg:justify-self-center px-3'>
+      <div id='about' className='grid lg:grid-cols-2'>
         <div className='text-left grid'>
           <h4 className='scroll-m-20 text-lg font-semibold tracking-tight'>{t('greetings')}</h4>
           <h1 className='scroll-m-20 text-4xl font-extrabold tracking-tight text-balance'>
@@ -37,7 +37,7 @@ export default function Home() {
       <div className='mt-6'>
         <Experience />
       </div>
-      <div className='mt-6'>
+      <div id='skills' className='mt-6'>
         <h1 className='scroll-m-20 text-4xl font-extrabold tracking-tight text-balance'>
           <AuroraText colors={['#059669', '#14532d', '#047857', '#065f46']}>Skills</AuroraText>
         </h1>

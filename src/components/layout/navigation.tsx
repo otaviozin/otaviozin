@@ -1,3 +1,5 @@
+'use client';
+
 import { Menu } from 'lucide-react';
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
@@ -15,6 +17,7 @@ import { AnimatedThemeToggler } from '../ui/animated-theme-toggler';
 import { useLocale, useTranslations } from 'next-intl';
 import { NavigationWrapper } from './navigation-wrapper';
 import Image from 'next/image';
+import { useState } from 'react';
 
 interface MenuItem {
   title: string;
@@ -27,6 +30,34 @@ interface MenuItem {
 export const Navigation = () => {
   const t = useTranslations('Navigation');
   const locale = useLocale();
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+
+  const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, url: string) => {
+    e.preventDefault();
+
+    // Fecha o menu mobile
+    setIsSheetOpen(false);
+
+    const hash = url.includes('#') ? url.substring(url.indexOf('#')) : url;
+
+    if (hash && hash.startsWith('#')) {
+      const sectionId = hash.substring(1);
+      const element = document.getElementById(sectionId);
+
+      if (element) {
+        const navigationHeight = 80;
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - navigationHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
+
+        window.history.pushState(null, '', hash);
+      }
+    }
+  };
 
   const logo = {
     url: 'https://otaviozin.vercel.app',
@@ -34,6 +65,7 @@ export const Navigation = () => {
     alt: 'logo',
     title: 'Otávio Pereira',
   };
+
   const menu = [
     { title: t('home'), url: `${locale}/` },
     {
@@ -53,6 +85,61 @@ export const Navigation = () => {
       url: `${locale}/#contact`,
     },
   ];
+
+  const renderMenuItem = (item: MenuItem) => {
+    if (item.items) {
+      return (
+        <NavigationMenuItem key={item.title}>
+          <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
+          <NavigationMenuContent className='bg-popover text-popover-foreground'>
+            {item.items.map((subItem) => (
+              <NavigationMenuLink asChild key={subItem.title} className='w-80'>
+                <SubMenuLink item={subItem} handleScrollToSection={handleScrollToSection} />
+              </NavigationMenuLink>
+            ))}
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+      );
+    }
+
+    return (
+      <NavigationMenuItem key={item.title}>
+        <NavigationMenuLink
+          href={item.url}
+          onClick={(e) => handleScrollToSection(e, item.url)}
+          className='hover:bg-muted hover:text-accent-foreground group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm text-md font-semibold transition-colors cursor-pointer'
+        >
+          {item.title}
+        </NavigationMenuLink>
+      </NavigationMenuItem>
+    );
+  };
+
+  const renderMobileMenuItem = (item: MenuItem) => {
+    if (item.items) {
+      return (
+        <AccordionItem key={item.title} value={item.title} className='border-b-0'>
+          <AccordionTrigger className='text-md py-0 font-semibold hover:no-underline'>{item.title}</AccordionTrigger>
+          <AccordionContent className='mt-2'>
+            {item.items.map((subItem) => (
+              <SubMenuLink key={subItem.title} item={subItem} handleScrollToSection={handleScrollToSection} />
+            ))}
+          </AccordionContent>
+        </AccordionItem>
+      );
+    }
+
+    return (
+      <a
+        key={item.title}
+        href={item.url}
+        onClick={(e) => handleScrollToSection(e, item.url)}
+        className='text-md font-semibold cursor-pointer'
+      >
+        {item.title}
+      </a>
+    );
+  };
 
   return (
     <NavigationWrapper>
@@ -81,7 +168,7 @@ export const Navigation = () => {
             <Image src={logo.src} className='max-h-8 dark:invert' alt={logo.alt} width={48} height={32} />
             <span className='text-xl font-semibold tracking-tighter drop-shadow-md'>{logo.title}</span>
           </a>
-          <Sheet>
+          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button variant='ghost' size='icon'>
                 <Menu className='size-4' />
@@ -112,60 +199,18 @@ export const Navigation = () => {
   );
 };
 
-const renderMenuItem = (item: MenuItem) => {
-  if (item.items) {
-    return (
-      <NavigationMenuItem key={item.title}>
-        <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
-        <NavigationMenuContent className='bg-popover text-popover-foreground'>
-          {item.items.map((subItem) => (
-            <NavigationMenuLink asChild key={subItem.title} className='w-80'>
-              <SubMenuLink item={subItem} />
-            </NavigationMenuLink>
-          ))}
-        </NavigationMenuContent>
-      </NavigationMenuItem>
-    );
-  }
-
-  return (
-    <NavigationMenuItem key={item.title}>
-      <NavigationMenuLink
-        href={item.url}
-        className='hover:bg-muted hover:text-accent-foreground group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm text-md font-semibold transition-colors'
-      >
-        {item.title}
-      </NavigationMenuLink>
-    </NavigationMenuItem>
-  );
-};
-
-const renderMobileMenuItem = (item: MenuItem) => {
-  if (item.items) {
-    return (
-      <AccordionItem key={item.title} value={item.title} className='border-b-0'>
-        <AccordionTrigger className='text-md py-0 font-semibold hover:no-underline'>{item.title}</AccordionTrigger>
-        <AccordionContent className='mt-2'>
-          {item.items.map((subItem) => (
-            <SubMenuLink key={subItem.title} item={subItem} />
-          ))}
-        </AccordionContent>
-      </AccordionItem>
-    );
-  }
-
-  return (
-    <a key={item.title} href={item.url} className='text-md font-semibold'>
-      {item.title}
-    </a>
-  );
-};
-
-const SubMenuLink = ({ item }: { item: MenuItem }) => {
+const SubMenuLink = ({
+  item,
+  handleScrollToSection,
+}: {
+  item: MenuItem;
+  handleScrollToSection: (e: React.MouseEvent<HTMLAnchorElement>, url: string) => void;
+}) => {
   return (
     <a
-      className='hover:bg-muted hover:text-accent-foreground flex min-w-80 select-none flex-row gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors'
+      className='hover:bg-muted hover:text-accent-foreground flex min-w-80 select-none flex-row gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors cursor-pointer'
       href={item.url}
+      onClick={(e) => handleScrollToSection(e, item.url)}
     >
       <div className='text-foreground'>{item.icon}</div>
       <div>
