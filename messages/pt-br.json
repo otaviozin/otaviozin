@@ -4,7 +4,12 @@
     "about": "Sobre",
     "skills": "Skills",
     "projects": "Projetos",
-    "contact": "Contato"
+    "contact": "Contato",
+    "lang": {
+      "select": "Selecione",
+      "selected": "PT-BR",
+      "label": "Idiomas"
+    }
   },
   "Home": {
     "greetings": "Olá, eu me chamo",
