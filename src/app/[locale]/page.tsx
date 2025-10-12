@@ -6,6 +6,7 @@ import { use } from 'react';
 import Image from 'next/image';
 import { Experience } from '@/components/home/experience';
 import { SkillsBeam } from '@/components/home/skills/skills-beam';
+import { Projects } from '@/components/home/projects';
 
 export default function Home() {
   const t = useTranslations('Home');
@@ -39,7 +40,7 @@ export default function Home() {
       </div>
       <div id='skills' className='mt-6'>
         <h1 className='scroll-m-20 text-4xl font-extrabold tracking-tight text-balance'>
-          <AuroraText colors={['#059669', '#14532d', '#047857', '#065f46']}>Skills</AuroraText>
+          <AuroraText colors={['#059669', '#14532d', '#047857', '#065f46']}>{t('skills.title')}</AuroraText>
         </h1>
         <div className='grid lg:grid-cols-2 gap-4'>
           <aside className='flex flex-col justify-center gap-10'>
@@ -47,6 +48,10 @@ export default function Home() {
             <p className='text-muted-foreground text-xl'>{t('skills.first_desc.1.text')}</p>
           </aside>
           <SkillsBeam />
+        </div>
+
+        <div>
+          <Projects />
         </div>
 
         <div className='flex flex-col lg:flex-row items-center gap-4 flex-col-reverse mt-8'>
