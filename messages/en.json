@@ -17,6 +17,7 @@
     "job_position": "Fullstack Developer",
     "presentation": "I primarily work with Next.js and Golang, alongside Docker and PostgreSQL, building scalable, high-performance web applications. I have a strong interest in Software Architecture and continuously study advanced concepts such as MVC, layered architecture, Monoliths, and Microservices, including the migration of Monolithic systems to Microservices.",
     "skills": {
+      "title": "Skills",
       "first_desc": [
         {
           "text": "This project leverages these technologies, which are central to my daily work. I apply them in both professional and personal projects, always focusing on best practices, scalability, and development quality."
