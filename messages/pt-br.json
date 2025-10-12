@@ -16,6 +16,9 @@
     "my_name": "Otávio",
     "job_position": "Desenvolvedor Fullstack",
     "presentation": "Atualmente uilizo Next.js e Golang como linguagens principais juntamente com Docker e PostgreSQL, criando sistemas web escaláveis e de alta performance. Possuo grande interesse em Arquitetura de Software e prossigo estudando para obter conhecimentos avançados sobre MVC, Layers, Monolitos e Microserviços, assim como a conversão de sistemas Monolíticos para Microserviços",
+    "projects": {
+      "title": "Projetos"
+    },
     "skills": {
       "title": "Skills",
       "first_desc": [
@@ -50,5 +53,16 @@
         ]
       }
     ]
+  },
+  "Projects": {
+    "portfolio": {
+      "title": "Portfólio",
+      "desc": "Projeto de portfólio - Feito com Next.js, TypeScript e ShadCN."
+    },
+    "binomial_distribution": {
+      "title": "Distribuição Binomial",
+      "desc": "Calculadora que realiza cálculos de distribuição binomial - Feito com Next.js e Tailwind CSS"
+    },
+    "link": "Ver no GitHub"
   }
 }

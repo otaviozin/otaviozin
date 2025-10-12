@@ -38,6 +38,16 @@ export default function Home() {
       <div className='mt-6'>
         <Experience />
       </div>
+
+      <div id='projects' className='mt-6'>
+        <h1 className='scroll-m-20 text-4xl font-extrabold tracking-tight text-balance'>
+          <AuroraText colors={['#059669', '#14532d', '#047857', '#065f46']}>{t('projects.title')}</AuroraText>
+        </h1>
+        <div className='grid lg:grid-cols-2 gap-4'>
+          <Projects />
+        </div>
+      </div>
+
       <div id='skills' className='mt-6'>
         <h1 className='scroll-m-20 text-4xl font-extrabold tracking-tight text-balance'>
           <AuroraText colors={['#059669', '#14532d', '#047857', '#065f46']}>{t('skills.title')}</AuroraText>
@@ -48,10 +58,6 @@ export default function Home() {
             <p className='text-muted-foreground text-xl'>{t('skills.first_desc.1.text')}</p>
           </aside>
           <SkillsBeam />
-        </div>
-
-        <div>
-          <Projects />
         </div>
 
         <div className='flex flex-col lg:flex-row items-center gap-4 flex-col-reverse mt-8'>

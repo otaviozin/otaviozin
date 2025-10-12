@@ -16,6 +16,9 @@
     "my_name": "Otávio",
     "job_position": "Fullstack Developer",
     "presentation": "I primarily work with Next.js and Golang, alongside Docker and PostgreSQL, building scalable, high-performance web applications. I have a strong interest in Software Architecture and continuously study advanced concepts such as MVC, layered architecture, Monoliths, and Microservices, including the migration of Monolithic systems to Microservices.",
+    "projects": {
+      "title": "Projects"
+    },
     "skills": {
       "title": "Skills",
       "first_desc": [
@@ -50,5 +53,17 @@
         ]
       }
     ]
-  }
+  },
+  "Projects": {
+  "portfolio": {
+    "title": "Portfolio",
+    "desc": "Portfolio project - Built with Next.js, TypeScript, and ShadCN."
+  },
+  "binomial_distribution": {
+    "title": "Binomial Distribution",
+    "desc": "Calculator that performs binomial distribution calculations - Built with Next.js and Tailwind CSS."
+  },
+  "link": "View on GitHub"
+}
+
 }
