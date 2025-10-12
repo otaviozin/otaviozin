@@ -10,7 +10,6 @@ import { GitHubLogoIcon } from '@radix-ui/react-icons';
 export const Projects = () => {
   const repos = use(GetUserRepos());
   const t = useTranslations('Projects');
-  console.log(repos);
 
   const customKeys: Record<string, { title: string; desc: string }> = {
     otaviozin: { title: 'portfolio.title', desc: 'portfolio.desc' },
