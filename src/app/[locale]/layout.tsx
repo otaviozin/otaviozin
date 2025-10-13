@@ -9,6 +9,7 @@ import { Navigation } from '@/components/layout/navigation';
 import { Particles } from '@/components/ui/particles';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Footer } from '@/components/layout/footer/footer';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -45,6 +46,7 @@ export default async function RootLayout({ children, params }: Props) {
             <Analytics />
             <SpeedInsights />
           </main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

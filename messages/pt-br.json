@@ -64,5 +64,38 @@
       "desc": "Calculadora que realiza cálculos de distribuição binomial - Feito com Next.js e Tailwind CSS"
     },
     "link": "Ver no GitHub"
+  },
+  "Footer": {
+    "title": "Contato",
+    "desc": "Estou disponível para perguntas, feedback ou oportunidades de colaboração. Me diga como posso ajudar!",
+    "form": {
+      "first_name": {
+        "label": "Nome",
+        "placeholder": "João"
+      },
+      "last_name": {
+        "label": "Sobrenome",
+        "placeholder": "Pereira"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "joao.pereira@gmail.com"
+      },
+      "subject": {
+        "label": "Assunto",
+        "placeholder": ""
+      },
+      "message": {
+        "label": "Mensagem",
+        "placeholder": "Escreva aqui sua mensagem :)"
+      },
+      "validations": {
+        "first_name": {
+          "min": "O nome deve conter no mínimo 3 letras."
+        },
+        "email": "Este email não é válido."
+      },
+      "send_email": "Enviar email"
+    }
   }
 }
