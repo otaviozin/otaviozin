@@ -6,7 +6,10 @@ export const Footer = () => {
   const t = useTranslations('Footer');
 
   return (
-    <div className='grid lg:grid-cols-2 px-6 py-4 lg:px-36 bg-white/80 dark:bg-black/80 border-t border-border backdrop-blur-2xl backdrop-saturate-150 shadow-lg'>
+    <div
+      id='contact'
+      className='grid lg:grid-cols-2 px-6 py-4 lg:px-36 bg-white/80 dark:bg-black/80 border-t border-border backdrop-blur-2xl backdrop-saturate-150 shadow-lg'
+    >
       <aside>
         <h1 className='scroll-m-20 text-4xl font-extrabold tracking-tight text-balance'>
           <AuroraText colors={['#059669', '#14532d', '#047857', '#065f46']}>{t('title')}</AuroraText>
