@@ -83,11 +83,11 @@
       },
       "subject": {
         "label": "Assunto",
-        "placeholder": ""
+        "placeholder": "Aqui você escreve o assunto"
       },
       "message": {
         "label": "Mensagem",
-        "placeholder": "Escreva aqui sua mensagem :)"
+        "placeholder": "E aqui a sua mensagem :)"
       },
       "validations": {
         "first_name": {
