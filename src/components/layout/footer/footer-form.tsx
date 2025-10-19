@@ -9,7 +9,6 @@ import { Field, FieldError, FieldGroup, FieldLabel } from '@/components/ui/field
 import { Input } from '@/components/ui/input';
 import { InputGroup, InputGroupAddon, InputGroupText, InputGroupTextarea } from '@/components/ui/input-group';
 import { Button } from '@/components/ui/button';
-import { SendEmail } from '@/api/email';
 
 export const ContactForm = () => {
   const t = useTranslations('Footer.form');

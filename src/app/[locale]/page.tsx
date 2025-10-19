@@ -7,7 +7,6 @@ import Image from 'next/image';
 import { Experience } from '@/components/home/experience';
 import { SkillsBeam } from '@/components/home/skills/skills-beam';
 import { Projects } from '@/components/home/projects';
-import { Footer } from '@/components/layout/footer/footer';
 
 export default function Home() {
   const t = useTranslations('Home');
