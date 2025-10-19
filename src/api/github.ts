@@ -1,8 +1,6 @@
 import { Octokit } from 'octokit';
 
-const octokit = new Octokit({
-  auth: process.env.NEXT_PUBLIC_GITHUB_API_TOKEN,
-});
+const octokit = new Octokit();
 
 export const GetUser = async () => {
   return await octokit.request('GET /users/{username}', {

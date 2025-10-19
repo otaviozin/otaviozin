@@ -90,12 +90,12 @@ export const Navigation = () => {
       url: `${locale}/#about`,
     },
     {
-      title: t('skills'),
-      url: `${locale}/#skills`,
-    },
-    {
       title: t('projects'),
       url: `${locale}/#projects`,
+    },
+    {
+      title: t('skills'),
+      url: `${locale}/#skills`,
     },
     {
       title: t('contact'),

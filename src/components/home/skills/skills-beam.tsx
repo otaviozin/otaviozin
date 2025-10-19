@@ -13,13 +13,13 @@ const Circle = forwardRef<HTMLDivElement, { className?: string; children?: React
         ref={ref}
         className={cn(
           'z-10 flex size-12 items-center justify-center rounded-full border-2 border-emerald-600 bg-white dark:border-emerald-900 dark:bg-neutral-900 p-2 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]',
-          className
+          className,
         )}
       >
         {children}
       </div>
     );
-  }
+  },
 );
 Circle.displayName = 'Circle';
 
@@ -34,10 +34,7 @@ export const SkillsBeam = () => {
   const div7Ref = useRef<HTMLDivElement>(null);
 
   return (
-    <div
-      className='relative flex h-[300px] w-full items-center justify-center overflow-hidden p-10 mb-6'
-      ref={containerRef}
-    >
+    <div className='relative flex h-[300px] w-full items-center justify-center p-10 mb-6' ref={containerRef}>
       <div className='flex size-full max-h-[200px] max-w-lg flex-col items-stretch justify-between gap-10'>
         <div className='flex flex-row items-center justify-between'>
           <Circle ref={div1Ref}>
@@ -100,7 +97,15 @@ const Icons = {
     </svg>
   ),
   op: () => (
-    <Image className='dark:invert w-full h-full object-contain' src='/logo.png' alt='Logo' width={200} height={200} />
+    <Image
+      src='/logo.png'
+      alt='Logo OP'
+      width={200}
+      height={200}
+      className='w-full h-full object-contain dark:invert'
+      priority={false}
+      unoptimized={false}
+    />
   ),
   nextjs: () => (
     <svg
