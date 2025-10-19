@@ -91,10 +91,25 @@
       },
       "validations": {
         "first_name": {
-          "min": "O nome deve conter no mínimo 3 letras."
+          "min": "O nome deve conter no mínimo 3 letras.",
+          "max": "O nome deve conter no máximo 50 caracteres."
         },
-        "email": "Este email não é válido."
+        "last_name": {
+          "min": "O sobrenome deve conter no mínimo 3 letras.",
+          "max": "O sobrenome deve conter no máximo 50 caracteres."
+        },
+        "email": "Este email não é válido.",
+        "subject": {
+          "min": "O assunto deve conter no mínimo 5 caracteres.",
+          "max": "O assunto deve conter no máximo 100 caracteres."
+        },
+        "message": {
+          "min": "A mensagem deve conter no mínimo 10 caracteres.",
+          "max": "A mensagem deve conter no máximo 100 caracteres."
+        }
       },
+      "success": "Email enviado com sucesso! Entraremos em contato em breve.",
+      "error": "Ocorreu um erro ao enviar o email. Tente novamente mais tarde.",
       "send_email": "Enviar email"
     }
   }
