@@ -55,15 +55,62 @@
     ]
   },
   "Projects": {
-  "portfolio": {
-    "title": "Portfolio",
-    "desc": "Portfolio project - Built with Next.js, TypeScript, and ShadCN."
+    "portfolio": {
+      "title": "Portfolio",
+      "desc": "Portfolio project - Built with Next.js, TypeScript, and ShadCN."
+    },
+    "binomial_distribution": {
+      "title": "Binomial Distribution",
+      "desc": "Calculator that performs binomial distribution calculations - Built with Next.js and Tailwind CSS."
+    },
+    "link": "View on GitHub"
   },
-  "binomial_distribution": {
-    "title": "Binomial Distribution",
-    "desc": "Calculator that performs binomial distribution calculations - Built with Next.js and Tailwind CSS."
-  },
-  "link": "View on GitHub"
-}
-
+  "Footer": {
+    "title": "Contact",
+    "desc": "I'm available for questions, feedback, or collaboration opportunities. Let me know how I can help!",
+    "form": {
+      "first_name": {
+        "label": "First Name",
+        "placeholder": "John"
+      },
+      "last_name": {
+        "label": "Last Name",
+        "placeholder": "Pereira"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "john.pereira@gmail.com"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Write the subject here"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "And your message here :)"
+      },
+      "validations": {
+        "first_name": {
+          "min": "The first name must contain at least 3 letters.",
+          "max": "The first name must contain a maximum of 50 characters."
+        },
+        "last_name": {
+          "min": "The last name must contain at least 3 letters.",
+          "max": "The last name must contain a maximum of 50 characters."
+        },
+        "email": "This email is not valid.",
+        "subject": {
+          "min": "The subject must contain at least 5 characters.",
+          "max": "The subject must contain a maximum of 100 characters."
+        },
+        "message": {
+          "min": "The message must contain at least 10 characters.",
+          "max": "The message must contain a maximum of 100 characters."
+        }
+      },
+      "success": "Email sent successfully! We’ll get back to you soon.",
+      "error": "An error occurred while sending the email. Please try again later.",
+      "send_email": "Send Email"
+    }
+  }
 }
