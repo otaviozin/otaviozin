@@ -38,7 +38,7 @@ export const Footer = () => {
         </div>
       </aside>
 
-      <aside className='w-full place-items-center'>
+      <aside className='w-full place-items-center lg:px-2'>
         <ContactForm />
       </aside>
     </div>
